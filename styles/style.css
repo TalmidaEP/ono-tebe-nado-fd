@@ -7,8 +7,7 @@
   font-size: 18px; 
   font-weight: 400;
   height: 293px;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin-right: 50px;
 }
 
 .header__links-list {
@@ -17,7 +16,7 @@
   gap: 30px; /*CHECK*/
 }
 
-.header__link{
+.header__link {
   list-style-type: circle;
 }
 
@@ -37,15 +36,16 @@
   height: inherit;
 }
 
-.header__address{
+.header__address {
   display: block;
   flex-direction: column;
   justify-self: end;
   align-items: left;
   text-wrap: nowrap;
+  padding: 1px;
 }
 
-.address__item{
+.address__item { 
   display:block;
   padding-left: 50px;
 }
@@ -53,11 +53,12 @@
 /*COVER section*/
 
 .cover {
-  position: relative; /*for parent positioning*/  
+  position: relative;/*for parent positioning*/  
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
-  background-size:cover; /*contain не подходит изза него overlay не работал и важно как обложка*/
+  background-size: cover;
   background-position: center;
+  max-height: 757px;
 }
 
 .overlay {
@@ -71,32 +72,40 @@
 }
 
 .cover__title {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  z-index: 1;
   color: #fff;
-  padding: 165px 50px 106px 50px;
+  padding: 165px 25px 106px 50px;
   font-weight: 700;
   font-size: 100px;
   line-height: 115px;
-  letter-spacing: 30px;
   text-transform: uppercase;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
 }
 
 .aligned-text {
   display: block;
+  letter-spacing: 30px;
+  line-height: 115px;
 }
 
 .aligned-text_center {
   text-align: center;
+  line-height: 115px;
 }
 
-.aligned-text_right{
+.aligned-text_right {
   text-align: right;
+  line-height: 115px;
 }
 
-.cover__description{
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+.cover__description {
   display: flex;
   position: relative;
   justify-content:space-between;
@@ -105,7 +114,7 @@
   align-items: center;
 }
 
-.cover__description-text{
+.cover__description-text {
   color: #fff;
   font-size: 22px;
   text-transform: uppercase;
@@ -122,18 +131,19 @@
   text-transform: uppercase;
   background: transparent;
   border: 1px #FFF solid; 
-  padding: 12px 11px;
+  width: 256px;
+  height: 51px;
+  padding: 12px 32px 11px 31px;
   cursor: pointer; /*need it?? в макете будто просто*/
 }
-/*no-letter-spacing*/
 
-.lots{
+.lots {
   padding-left: 24px;
   padding-right: 24px;
 }
 
-/*ЛОТЫ*/
-.lots__heading{ 
+/*ABOUT 3 LOTS*/
+.lots__heading { 
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -145,7 +155,7 @@
 }
 
 /*LOTS CONTAINER*/
-.lots__card-list{
+.lots__card-list {
   display:flex;
   flex-wrap: wrap; /*practicum if add 4th card */
   flex-direction:row;
@@ -153,19 +163,19 @@
   list-style:none;
 }
 
-.lots__card-list-item{
+.lots__card-list-item {
   max-width: 334px;
   min-height: 596px;
   flex-grow: 1; /* card for container*/
 }
 
-.card-link{
+.card-link {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-.card{
+.card {
   position: relative;
   display: flex;
   flex-direction: column; /*from practicum*/
@@ -197,7 +207,7 @@
   background-position: center;
 }
 
-.card__title{
+.card__title {
   position: relative;
   z-index: 1; 
   font-size: 22px;
@@ -207,7 +217,7 @@
   font-weight: 700;
 }
 
-.card-text{
+.card-text {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -215,31 +225,31 @@
   z-index: 1;
 }
 
-.lots__look-more-link{
+.lots__look-more-link {
   display:block;
   padding-top: 30px;
-  padding-left: 64px;
+  padding-left: 40px;
   font-size: 20px;
   font-weight: 400;
   line-height: 23.48px;
   color: #000;
 }
 
-.about{
+.about {
   display: grid;
   grid-template-columns: 334px 1fr; /*334 the size of cards*/
   column-gap: 34px;
   min-height: 595px;
-  margin-top: 133px;
+  margin-top: 120px;
   margin-left: 24px;
   margin-right: 24px;
 }
 
-.about__column{
+.about__column {
   padding: 35px 0 0 47px;
 }
 
-.about__logo{
+.about__logo {
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -249,18 +259,18 @@
   background-color: #000;
 }
 
-.about__logo-image{
+.about__logo-image {
   width: 148px;
 }
 
-.about__auction{
+.about__auction {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: top;
 }
 
-.about__title{
+.about__title {
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -270,26 +280,29 @@
   padding-bottom: 100px;
 }
 
-.about__text{
+.about__text {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #000;
 }
 
-.about__first{
+.about__first {
   padding-bottom: 20px;
 }
 
-.footer{
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px; 
-  height: 293px;
+  height: 180px;
+  padding-left: 50px;
+  padding-right: 50px;
+  /*margin-top: 90px;*/
 }
 
-.footer__address{
+.footer__address {
   justify-self: start;
   font-style: inherit;
 }
@@ -298,7 +311,6 @@
   display: flex;
   flex-direction: column;
   text-wrap: nowrap;
-  padding-left: 50px;
   list-style-type: none;
 }
 
@@ -306,15 +318,14 @@
   text-decoration-line: none;
 }
 
-.footer__social-list{
+.footer__social-list {
   display:flex;
   flex-direction: row;
   list-style: none;
-  gap: 40px;
+  gap: 30px;
 }
 
-
-.footer__social-icon{
+.footer__social-icon {
   width: 48px;
   height: 48px;
   display: block;
