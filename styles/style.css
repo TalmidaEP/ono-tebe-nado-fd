@@ -309,18 +309,17 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 18px;
-  padding-top: 1600px;
+  padding-top: 180px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 80px;
+  /*padding-bottom: 80px;*/
 }
 
 .footer__address {
   justify-self: start;
   font-style: inherit;
-  /*text-underline-offset: 5px;*/
 }
 
 .footer__links-list {
@@ -329,7 +328,6 @@
   align-items: center;
   text-wrap: nowrap;
   list-style-type: none;
-  padding-top: 2px;
 }
 
 .footer__links-list_active {
@@ -337,7 +335,7 @@
 }
 
 .footer__social-list {
-  display:flex;
+  display: flex;
   flex-direction: row;
   list-style: none;
   gap: 48px;
