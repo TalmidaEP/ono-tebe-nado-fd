@@ -144,7 +144,7 @@
   /*width: 256px;
   height: 51px;*/
   padding: 12px 32px 11px 31px;
-  cursor: pointer; /*need it??*/
+  /*cursor: pointer; */
 }
 
 .lots {
@@ -314,7 +314,7 @@
   padding-top: 180px;
   padding-left: 50px;
   padding-right: 50px;
-  /*padding-bottom: 80px;*/
+  padding-bottom: 80px;
 }
 
 .footer__address {
