@@ -8,13 +8,13 @@
   font-weight: 400;
   height: 293px;
   /*margin-right: 50px;*/
-  padding: 95px 49px 100px;
+  padding: 95px 53px 100px 49px;
 }
 
 .header__links-list {
   display: flex;
   list-style: circle;
-  gap: 30px; /*CHECK*/
+  gap: 33px; /*CHECK*/
 }
 
 .header__link {
@@ -38,16 +38,25 @@
 }
 
 .header__address {
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-self: end;
   align-items: left;
   text-wrap: nowrap;
-  padding: 1px;
 }
 
 .address__item { 
   display: block;
+  color: #000;
+  font-style: normal;
+}
+
+.address__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.3px;
+  padding-right: 30px;
+  text-decoration: none;
 }
 
 /*COVER section*/
@@ -77,12 +86,13 @@
   /*align-items: inherit;*/
   z-index: 1;
   color: #fff;
-  padding: 165px 25px 0px 50px;
+  padding: 165px 21px 0px 50px;
   font-weight: 700;
   font-size: 100px;
   line-height: 115px;
   text-transform: uppercase;
   position: relative;
+  gap:22px;
 }
 
 .aligned-text {
@@ -110,7 +120,7 @@
   position: relative;
   justify-content:space-between;
   z-index: 1;
-  padding: 106px 50px 50px 50px;
+  padding: 101px 50px 50px 50px;
   align-items: center;
 }
 
@@ -118,10 +128,9 @@
   color: #fff;
   font-size: 22px;
   text-transform: uppercase;
-  word-spacing: 14px;
+  word-spacing: 18px; /*manally*/
   line-height: 28px;
   font-weight: 400;
-  word-spacing: 18px;
 }
 
 .bet-button {
@@ -239,7 +248,7 @@
 .about {
   display: grid;
   grid-template-columns: 334px 1fr; /*334 the size of cards*/
-  column-gap: 34px;
+  column-gap: 25px;
   min-height: 595px;
   margin-top: 120px;
   margin-left: 24px;
@@ -289,7 +298,12 @@
 }
 
 .about__first {
-  padding-bottom: 20px;
+  padding-bottom: 24px;
+  padding-right: 5px;
+}
+
+.about__second {
+  padding-bottom: 13px;
 }
 
 .footer {
@@ -297,24 +311,25 @@
   justify-content: space-between;
   align-items: center;
   font-size: 18px; 
-  height: 180px;
-  padding-top: 180px;
+  padding-top: 1600px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 30px;
-  /*margin-top: 90px;*/
+  padding-bottom: 80px;
 }
 
 .footer__address {
   justify-self: start;
   font-style: inherit;
+  /*text-underline-offset: 5px;*/
 }
 
 .footer__links-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-wrap: nowrap;
   list-style-type: none;
+  padding-top: 2px;
 }
 
 .footer__links-list_active {
@@ -325,7 +340,7 @@
   display:flex;
   flex-direction: row;
   list-style: none;
-  gap: 30px;
+  gap: 48px;
 }
 
 .footer__social-icon {
